@@ -3,7 +3,19 @@ def check_numbers(user_input):
     #return only_numbers
 
 
-while True:
+# while True:
+#     print(check_numbers(input()))
+
+# strings = ['1.2', '2.3', '4.1']
+# def convert_and_sum (strings):
+#     sum = 0
+#     for number in strings:
+#         sum += float(number)
+#     return sum
 
 
-print(check_numbers(input()))
+# print (convert_and_sum(strings))
+
+
+
+print(foo ('bbb', 'lll', 'aaa'))
