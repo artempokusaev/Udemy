@@ -1,4 +1,12 @@
-with open("data.txt", "r+") as f:
-    content = f.read()
-    for i in range(3):
-        f.write(content)
+import time
+import os
+import pandas
+
+while True:
+    if os.path.exists("files/temps_today.csv"):
+        data = pandas.read_csv("files/temps_today.csv")
+        print(data.mean()["st1"])
+
+    else:
+        print("File does not exist.")
+    #time.sleep(10)
