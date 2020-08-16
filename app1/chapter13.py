@@ -22,8 +22,17 @@ def word_def(word):
     if word in data:
         return data[word]
     elif len(get_close_matches(word, data.keys())) > 0:
-        return "Did you mean %s instead?" %get_close_matches(word, data.keys())[0]
+        print("Did you mean %s instead? Press Y if yes, and N if no." %get_close_matches(word, data.keys())[0])
+        if input() == "Y":
+            return data[get_close_matches(word, data.keys())[0]]
+        else:
+            return "We didn't find word. Please double check it."
     else:
         return "We didn't find word. Please double check it."
 
-print(word_def(input("Enter the word: ")))
+output = word_def(input("Enter the word: "))
+if type(output) == list:
+    for i in output:
+        print(i)
+else:
+    print(output)
